@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue - Online Bookstore</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- HEADER SECTION --- */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        .website-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        .nav-links a.active {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+        }
+
+        /* --- CATALOGUE CONTENT --- */
+        main {
+            flex: 1;
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .category-section {
+            margin-bottom: 40px;
+        }
+
+        .category-title {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .book-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .book-table th, .book-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .book-table th {
+            background-color: #2c3e50;
+            color: white;
+            font-weight: 600;
+        }
+
+        .book-table tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        .book-cover {
+            width: 80px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        .book-details {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .book-title {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .book-author {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .book-publisher {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .book-price {
+            font-weight: bold;
+            color: #27ae60;
+            font-size: 1.1rem;
+        }
+
+        .btn-add-cart {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .btn-add-cart:hover {
+            background-color: #219150;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Content Section -->
+    <main>
+        <h1>Book Catalogue</h1>
+
+        <!-- CSE Category -->
+        <div class="category-section">
+            <h2 class="category-title">CSE (Computer Science)</h2>
+            <table class="book-table">
+                <thead>
+                    <tr>
+                        <th>Cover</th>
+                        <th>Book Details</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="xml.jpeg" alt="XML Bible" class="book-cover"></td>
+                        <td>
+                            <div class="book-details">
+                                <span class="book-title">XML Bible</span>
+                                <span class="book-author">Author: Winston</span>
+                                <span class="book-publisher">Publisher: Wiley</span>
+                            </div>
+                        </td>
+                        <td class="book-price">$40.50</td>
+                        <td><button class="btn-add-cart">Add to Cart</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ECE Category -->
+        <div class="category-section">
+            <h2 class="category-title">ECE (Electronics & Communication)</h2>
+            <table class="book-table">
+                <thead>
+                    <tr>
+                        <th>Cover</th>
+                        <th>Book Details</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="ai.jpeg" alt="AI Book" class="book-cover"></td>
+                        <td>
+                            <div class="book-details">
+                                <span class="book-title">Artificial Intelligence</span>
+                                <span class="book-author">Author: S. Russel</span>
+                                <span class="book-publisher">Publisher: Princeton Hall</span>
+                            </div>
+                        </td>
+                        <td class="book-price">$63.00</td>
+                        <td><button class="btn-add-cart">Add to Cart</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- EEE Category -->
+        <div class="category-section">
+            <h2 class="category-title">EEE (Electrical & Electronics)</h2>
+            <table class="book-table">
+                <thead>
+                    <tr>
+                        <th>Cover</th>
+                        <th>Book Details</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="java2.jpeg" alt="Java 2" class="book-cover"></td>
+                        <td>
+                            <div class="book-details">
+                                <span class="book-title">Java 2</span>
+                                <span class="book-author">Author: Watson</span>
+                                <span class="book-publisher">Publisher: BPB Publications</span>
+                            </div>
+                        </td>
+                        <td class="book-price">$35.50</td>
+                        <td><button class="btn-add-cart">Add to Cart</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- CIVIL Category -->
+        <div class="category-section">
+            <h2 class="category-title">CIVIL Engineering</h2>
+            <table class="book-table">
+                <thead>
+                    <tr>
+                        <th>Cover</th>
+                        <th>Book Details</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="html24.jpg" alt="HTML in 24 Hours" class="book-cover"></td>
+                        <td>
+                            <div class="book-details">
+                                <span class="book-title">HTML in 24 Hours</span>
+                                <span class="book-author">Author: Sam Peter</span>
+                                <span class="book-publisher">Publisher: Sam Publication</span>
+                            </div>
+                        </td>
+                        <td class="book-price">$50.00</td>
+                        <td><button class="btn-add-cart">Add to Cart</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Online Bookstore. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
