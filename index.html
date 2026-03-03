@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Bookstore</title>
+</head>
+<!-- Define the rows: Top frame is 20%, Bottom area is 80% -->
+<frameset rows="20%, 80%">
+    
+    <!-- Top Frame -->
+    <frame src="top.html" name="topFrame">
+    
+    <!-- Bottom Area: Split into Left and Right -->
+    <frameset cols="25%, 75%">
+        <!-- Left Frame -->
+        <frame src="left.html" name="leftFrame">
+        
+        <!-- Right Frame -->
+        <frame src="right.html" name="rightFrame">
+    </frameset>
+</frameset>
+
+<!-- Fallback for browsers that don't support frames -->
+<noframes>
+    <body>
+        <p>Your browser does not support frames. Please use a modern browser.</p>
+    </body>
+</noframes>
+</html>
